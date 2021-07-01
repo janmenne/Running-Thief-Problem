@@ -1,3 +1,5 @@
+![Operations Research](https://media.giphy.com/media/3orieUe6ejxSFxYCXe/giphy.gif)
+
 # Running Thief Problem
 
 This problem is about a thief, that has to rob a set of houses in different streets. <br>
