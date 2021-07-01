@@ -16,7 +16,7 @@ in your Command Line.
 
 ## Usage
 
-```python
+```
 After installing and running the program will return the perfect way for the specified RTP.
 ```
 
