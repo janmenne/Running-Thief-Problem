@@ -17,7 +17,7 @@ in your Command Line.
 ## Usage
 
 ```
-After installing and running the program will return the perfect way for the specified RTP.
+After installing and running the program will return the perfect way for the before specified RTP.
 ```
 
 ## Contributing
