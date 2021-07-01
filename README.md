@@ -1,4 +1,4 @@
-![Operations Research](https://media.giphy.com/media/ZIzN7YWNuTUYg/giphy.gif)
+<center>![Operations Research](https://media.giphy.com/media/ZIzN7YWNuTUYg/giphy.gif)</center>
 
 # Running Thief Problem
 
