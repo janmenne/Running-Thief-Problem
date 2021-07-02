@@ -5,7 +5,7 @@ Loesungsansatz fuer das Running Thief Problem.
 1. Dijkstra Algorithmus um die besten Wege von jedem Knoten zum Endknoten zu berechnen.
 2. Optimale Route aufstellen ueber WDG Wert
     - WDG berechnet sich aus Wert / Distanz (Nachbarknoten+Dijkstra) / Gewicht
-3. Optimale Route nach Wert/Gewicht sortieren und Rucksack vollpacken.
+3. Optimale Route nach Wert/Gewicht sortieren und Rucksack vollpacken. :)
 
 '''
 from queue import PriorityQueue
