@@ -23,8 +23,16 @@ class FileManager:
                     value_mode = True
                     self.items = []
 
-            elif not fields[0] == "#EOF":
-                self.items.append(eval(fields[2]))
+            elif not fields[0] == "#EOF":  # Index + 1 = Knoten
+
+                self.itemCoordinate.append(eval(fields[1]))  # [(1,1), (0,4) ..] Wert1 = x, Wert2 = y
+
+                self.items.append(eval(fields[2]))  # [(2,3), (4,6) ..] Wert1 = Gewicht, Wert2 = Wert
+                try:
+                    self.itemNeighbour.append(
+                        eval(fields[3]))  # [(2, 4..), (8, 3..) ..] Wert 1 = Nachbar1... Wert 5 = Nachbar 5
+                except IndexError:
+                    self.itemNeighbour.append(())
 
         # recompute ratios based on read values
         self.ratioed_items = []
@@ -52,10 +60,19 @@ class FileManager:
         # initial solution as list of -1 values
         self.initialSol = len(self.items) * [-1]
 
+        self.itemNeighbour = []
+
+        self.itemCoordinate = []
+
         self.read()
 
         print(filename + " wurde eingelesen mit den Attributen:")
+        print("\nItem Gewicht / Wert:")
         print(self.items)
+        print("\nItem Koordinaten:")
+        print(self.itemCoordinate)
+        print("\nItem Neighbours:")
+        print(self.itemNeighbour)
         print("\nMaximale Kapazitaet:")
         print(self.max_capacity)
         print("\nWert durch Gewicht fuer jeden Knoten:")

@@ -15,6 +15,21 @@ class Graph(object):
         self.edges[to_node].append(from_node)
         self.distances[(from_node, to_node)] = distance
 
+    def import_data(self, filename):
+        fm = FileManager(filename)
+
+        for i in range(len(fm.items)):
+            self.add_node(i)
+
+        for knotenIndex in range(len(fm.itemNeighbour)):
+            for neighbourIndex in range(len(fm.itemNeighbour[knotenIndex])):
+                a = math.exp(fm.itemCoordinate[neighbourIndex][0] - fm.itemCoordinate[knotenIndex][0])
+                b = math.exp(fm.itemCoordinate[neighbourIndex][1] - fm.itemCoordinate[knotenIndex][1])
+
+                e = math.sqrt(a + b)
+
+                self.add_edge(knotenIndex, neighbourIndex, e)
+
 
 def dijkstra(graph, initial):
     visited = {initial: 0}
