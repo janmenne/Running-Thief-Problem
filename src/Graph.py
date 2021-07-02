@@ -1,34 +1,28 @@
 from collections import defaultdict, deque
 
 
+
 class Graph(object):
     def __init__(self):
         self.nodes = set()
-        self.edges = defaultdict(list)
+        self.edges = defaultdict(set)
         self.distances = {}
 
     def add_node(self, value):
         self.nodes.add(value)
 
     def add_edge(self, from_node, to_node, distance):
-        self.edges[from_node].append(to_node)
-        self.edges[to_node].append(from_node)
+        self.edges[from_node].add(to_node)
+        self.edges[to_node].add(from_node)
         self.distances[(from_node, to_node)] = distance
 
     def import_data(self, filename):
         fm = FileManager(filename)
 
-        for i in range(len(fm.items)):
-            self.add_node(i)
-
-        for knotenIndex in range(len(fm.itemNeighbour)):
-            for neighbourIndex in range(len(fm.itemNeighbour[knotenIndex])):
-                a = math.exp(fm.itemCoordinate[neighbourIndex][0] - fm.itemCoordinate[knotenIndex][0])
-                b = math.exp(fm.itemCoordinate[neighbourIndex][1] - fm.itemCoordinate[knotenIndex][1])
-
-                e = math.sqrt(a + b)
-
-                self.add_edge(knotenIndex, neighbourIndex, e)
+        for node in fm.items:
+            self.add_node(node.name)
+            for neighbour in node.getNeighbours():
+                self.add_edge(node.name, neighbour[1].name, node.getDistanceTo(neighbour[1]))
 
 
 def dijkstra(graph, initial):
