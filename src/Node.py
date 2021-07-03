@@ -1,5 +1,6 @@
 import MethodCollection as mc
 
+
 class Node:
     '''
     Node Klasse.
@@ -66,7 +67,7 @@ class Node:
         :param node: Node-Objekt, zu dem die Distanz bestimmt werden soll.
         :return: Distanz zu uebergebenem Node-Objekt.
         '''
-        if(node.name in self.distances.keys()):
+        if (node.name in self.distances.keys()):
             return self.distances.get(node.name)
         else:
             raise KeyError("Der uebergebene Knotenpunkt ist kein Nachbarknoten!")

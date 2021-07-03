@@ -10,6 +10,7 @@ class Graph(object):
         self.nodes = set()
         self.edges = defaultdict(set)
         self.distances = {}
+        self.allNodes = set()
 
     def add_node(self, value):
         self.nodes.add(value)
@@ -22,7 +23,9 @@ class Graph(object):
     def import_data(self, filename):
         fm = FileManager(filename)
 
-        for node in fm.items:
+        self.allNodes = fm.items
+
+        for node in self.allNodes:
             self.add_node(node.name)
             for neighbour in node.getNeighbours():
                 self.add_edge(node.name, neighbour[1].name, node.getDistanceTo(neighbour[1]))
