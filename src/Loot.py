@@ -1,4 +1,7 @@
 class Loot:
+    """
+    Repraesentiert die Beute
+    """
 
     def __init__(self, value, weight):
         self._value = value
@@ -10,7 +13,10 @@ class Loot:
 
     @value.setter
     def value(self, value):
-        self._value = value
+        if value >= 0:
+            self._value = value
+        else:
+            raise ValueError("Wert muss >= 0 sein!")
 
     @value.deleter
     def value(self):
@@ -22,8 +28,18 @@ class Loot:
 
     @weight.setter
     def weight(self, weight):
-        self._weight = weight
+        if weight > 0:
+            self._weight = weight
+        else:
+            raise ValueError("Gewicht muss > 0 sein!")
 
     @weight.deleter
     def weight(self):
         del self._weight
+
+    def calculate_vw(self):
+        return self._value/self.weight
+
+    def compare_to(self, loot):
+        if self.calculate_vw() > loot.calculate_vw():
+            return True
