@@ -27,7 +27,6 @@ class Graph(object):
             for neighbour in node.getNeighbours():
                 self.add_edge(node.name, neighbour[1].name, node.getDistanceTo(neighbour[1]))
 
-
 def dijkstra(graph, initial):
     visited = {initial: 0}
     path = {}
