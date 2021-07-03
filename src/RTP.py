@@ -5,11 +5,20 @@ import MethodCollection as MC
 
 
 def best_path(filename):
+    '''
+    berechnet den besten Pfad von einem gegebenen Startpunkt zu einem Endpunkt.
+    :param filename: Name der .txt Vorlage
+    :return: Liste mit Reihenfolge der besuchten Knoten + Beute (True/False)
+    '''
     graph = Graph()
     graph.import_data(filename)
-    nodes = graph.getNodes()
 
-    print(nodes)
+    last_element = list(graph.allNodes)[-1].name
+    route = []
+    getRoute(graph, route, last_element)
+
+    print(route)
+
 
 def getRoute(graph, route, last_element):
     if not graph.allNodes:

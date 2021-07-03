@@ -1,6 +1,5 @@
 import math
 
-
 def calculate_distance(v1, v2):
     if len(v1) == 2 and len(v2) == 2:
         x = math.pow(v1[0] - v2[0], 2)

@@ -72,6 +72,9 @@ class Node:
         else:
             raise KeyError("Der uebergebene Knotenpunkt ist kein Nachbarknoten!")
 
+    def set_distance_to(self, node, distance):
+        self.distances[node.name] = distance
+
     def getNeighbours(self):
         '''
         Gibt die bestehenden Nachbarknoten zurueck.
