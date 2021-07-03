@@ -24,6 +24,7 @@ class Graph(object):
         fm = FileManager(filename)
 
         self.allNodes = fm.items
+        self.max_capacity = fm.max_capacity
 
         for node in self.allNodes:
             self.add_node(node.name)
