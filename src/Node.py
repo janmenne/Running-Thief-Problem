@@ -1,11 +1,19 @@
 import MethodCollection as mc
 
-# Node Klasse.
-# Bildet die Funktionalitaet von Knotenpunkten im Rahmen des Running Thief Problems ab.
 class Node:
+    '''
+    Node Klasse.
+    Bildet die Funktionalitaet von Knotenpunkten im Rahmen des Running Thief Problems ab.
+    '''
 
-    # Erzeugt eine neue Knotenpunktinstanz unter Angabe von Name, Wert, Gewicht und Koordinaten.
     def __init__(self, name, value, weight, coordinates):
+        '''
+        Erzeugt eine neue Knotenpunktinstanz unter Angabe von Name, Wert, Gewicht und Koordinaten.
+        :param name: Name des Knotenpunkts
+        :param value: Wert der Beute
+        :param weight: Gewicht der Beute
+        :param coordinates: Koorinaten des Knotenpunktes.
+        '''
         self.name = name
         self.value = value
         self.weight = weight
@@ -13,39 +21,74 @@ class Node:
         self.distances = {}
         self.coordinates = coordinates
 
-    # Setzt den Wert der an dem Knotenpunkt befindlichen Beute.
     def setValue(self, value):
+        '''
+        Setzt den Wert der an dem Knotenpunkt befindlichen Beute.
+        :param value: Neuer Wert der Beute
+        :return:
+        '''
         self.value = value
 
-    # Gibt den Wert der an dem Knotenpunkt befindlichen Beute zurueck.
     def getValue(self):
+        '''
+        Gibt den Wert der an dem Knotenpunkt befindlichen Beute zurueck.
+        :return: Aktueller Wert der Beute
+        '''
         return self.value
 
-    # Setzte das Gewicht der an dem Knotenpunkt befinflichen Beute.
     def setWeight(self, weight):
+        '''
+        Setzte das Gewicht der an dem Knotenpunkt befinflichen Beute.
+        :param weight: neues Gewicht.
+        :return:
+        '''
         self.weight = weight
 
-    # Gibt den Wert der an dem Knotenpunkt befindlichen Beute zurueck.
     def getWeight(self):
+        '''
+        Gibt den Wert der an dem Knotenpunkt befindlichen Beute zurueck.
+        :return: Aktuelles Gewicht der Beute
+        '''
         return self.weight
 
-    # Fuegt zum Knotenpunkt einen Nachbarknoten hinzu und berechnet die Distanz zwischen beiden Punkten.
     def setNeighbour(self, node):
+        '''
+        Fuegt zum Knotenpunkt einen Nachbarknoten hinzu und berechnet die Distanz zwischen beiden Punkten.
+        :param node: Node-Objekt, dass als Nachbar gesetzt werden soll.
+        :return:
+        '''
         self.neighbours[node.name] = node
-        self.distances[node.name] = mc.calculateDistance(self.coordinates, (node.getCoordinates()))
+        self.distances[node.name] = mc.calculate_distance(self.coordinates, (node.getCoordinates()))
 
-    # Gibt die Distanz zu einem beleibigen Nachbarknoten zurueck.
     def getDistanceTo(self, node):
-        return self.distances.get(node.name)
+        '''
+        Gibt die Distanz zu einem beliebigen Nachbarknoten zurueck.
+        :param node: Node-Objekt, zu dem die Distanz bestimmt werden soll.
+        :return: Distanz zu uebergebenem Node-Objekt.
+        '''
+        if(node.name in self.distances.keys()):
+            return self.distances.get(node.name)
+        else:
+            raise KeyError("Der uebergebene Knotenpunkt ist kein Nachbarknoten!")
 
-    # Gibt ein dictinory der Nachbarknoten zurueck.
     def getNeighbours(self):
+        '''
+        Gibt die bestehenden Nachbarknoten zurueck.
+        :return: dictionary der existierenden Nachbarknoten
+        '''
         return self.neighbours.items()
 
-    # Gibt einen Nachbarknoten unter Angabe des Namens zurueck.
     def getNeighbour(self, name):
+        '''
+        Gibt einen Nachbarknoten unter Angabe des Namens zurueck.
+        :param name: Name des Node-Objekts
+        :return: Node mit entsprechendem Namen
+        '''
         return self.neighbours.get(name)
 
-    # Gibt die Koordinaten des Knotenpunktes zurueck.
     def getCoordinates(self):
+        '''
+        Gibt die Koordinaten des Knotenpunktes zurueck.
+        :return: List mit Koordinaten.
+        '''
         return self.coordinates

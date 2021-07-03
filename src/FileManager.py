@@ -1,6 +1,3 @@
-from queue import PriorityQueue
-import math
-import sys
 from Node import Node as node
 
 
@@ -25,7 +22,6 @@ class FileManager:
                     self.items = []
 
             elif not fields[0] == "#EOF":  # Index + 1 = Knoten
-                # Name            #Wert              #Gewicht            #Koordinaten
                 valueweight = eval(fields[2])
                 n = node(eval(fields[0]), valueweight[1], valueweight[0], eval(fields[1]))
                 self.items.append(n)
@@ -49,9 +45,9 @@ class FileManager:
         for i in range(len(self.itemNeighbour)):
 
             if not self.itemNeighbour[i]:
-                for all in self.items:
-                    if all != self.items[i]:
-                        self.items[i].setNeighbour(all)
+                for element in self.items:
+                    if element != self.items[i]:
+                        self.items[i].setNeighbour(element)
 
             for j in self.itemNeighbour[i]:
                 self.items[i].setNeighbour(self.items[j - 1])

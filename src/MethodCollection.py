@@ -1,7 +1,7 @@
 import math
 
 
-def calculateDistance(v1, v2):
+def calculate_distance(v1, v2):
     if len(v1) == 2 and len(v2) == 2:
         x = math.pow(v1[0] - v2[0], 2)
         y = math.pow(v1[1] - v2[1], 2)
@@ -12,4 +12,7 @@ def calculateDistance(v1, v2):
 
 
 def calculateWDG(wert, distance, gewicht):
-    return wert / distance / gewicht
+    if (distance > 0 and gewicht > 0):
+        return wert / distance / gewicht
+    else:
+        raise ZeroDivisionError("Die Werte Distanz und Gewicht muessen > 0 sein!")
