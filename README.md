@@ -12,7 +12,7 @@ This algorithm takes the best route and builds our path from house to house.
 Just download the [Package](https://github.com/jancodet/Running-Thief-Problem) and run:
 
 ```bash
-python RTP.py
+python RTP.py --name rtp_0_5.txt
 ```
 in your Command Line.
 
