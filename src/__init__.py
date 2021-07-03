@@ -1,6 +1,7 @@
 from src.Graph import Graph, shortest_path
 from FileManager import FileManager
 from Node import Node
+from Loot import Loot
 
 if __name__ == '__main__':
     graph = Graph()
