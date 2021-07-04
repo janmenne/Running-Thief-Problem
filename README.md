@@ -14,9 +14,23 @@ He has a backpack that is capable of a specified amount of loot and should get t
 We used Dijkstra to measure the distance between a house and the end house. Then an algorithm builds a value that represents worth/weight/distance. <br>
 This algorithm takes the best route and builds our path from house to house.
 
-How exactly do we solve the problem?
-In our approach, we start with importing and preparing the problem models that are in the src / data
-can be found. Each .txt document represents a graph, where k is the maximum weight and n is the number of nodes.
+How exactly do we solve the problem?<br>
+In our approach, we start with importing and preparing the problem models that are in the [src / data](src/data)
+can be found. Each .txt document represents a graph, where k is the maximum weight and n is the number of nodes.<br>
+Example of a .txt:
+```
+#META
+name = Problem 0
+k = 6
+N = 5
+#NODES
+1   (1,1)  (1,3)  [2,3]
+2   (0,4)  (2,1)  
+3   (4,2)  (2,4)  [1,2,4]
+4   (2,2)  (3,3)  [2,3,5]
+5   (5,5)  (2,2)  [2,4]	
+#EOF
+```
 
 The graph is defined more precisely in the #EOF section. Each line begins with the name of the node (e.g. 1), the coordinates
 of the node (x, y), value and weight of the loot (value, weight), as well as the other nodes that can be reached from this node (e.g. [1,3]).
