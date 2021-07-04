@@ -72,7 +72,7 @@ destination |  |
 ### best_path
 
 
-Berechnet den besten Pfad von einem gegebenen Startpunkt zu einem Endpunkt. :param filename: Name der .txt Vorlage :return: Liste mit Reihenfolge der besuchten Knoten + Beute (True/False) 
+Berechnet den besten Pfad von einem gegebenen Startpunkt zu einem Endpunkt. :param filename: Name der .txt Vorlage. :return: Liste mit Reihenfolge der besuchten Knoten + Beute (True/False) 
 #### Parameters
 name | description | default
 --- | --- | ---
