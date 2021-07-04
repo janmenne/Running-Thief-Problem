@@ -41,7 +41,7 @@ Taking into account the upper weight limit (defined as maximum weight k in the p
 
 ## Installation
 
-Just download the [Package](https://github.com/janmenne/Running-Thief-Problem/releases/latest) and run the RTP.exe.
+Just download the [Package](https://github.com/janmenne/Running-Thief-Problem/releases/latest) and run the
 
 ```bash
 RTP.exe
