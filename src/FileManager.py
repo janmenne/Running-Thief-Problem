@@ -1,9 +1,9 @@
 from Node import Node as node
 
-'''
-Einlesen der gegebene Datein aus src/data
-'''
 class FileManager:
+    '''
+    Einlesen der gegebene Datein aus src/data
+    '''
 
     def read(self):
         """import an instance from file and overwrite the default global data.
