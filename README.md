@@ -2,6 +2,9 @@
 
 # Running Thief Problem
 
+![](https://github.com/janmenne/Running-Thief-Problem/workflows/PythonFormatting/badge.svg)
+
+
 This problem is about a thief, that has to rob a set of houses in different streets. <br>
 He has a backpack that is capable of a specified amount of loot and should get the most in the shortest time (way).<br>
 We used Dijkstra to measure the distance between a house and the end house. Then an algorithm builds a value that represents worth/weight/distance. <br>
