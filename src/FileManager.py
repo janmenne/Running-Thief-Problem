@@ -1,6 +1,8 @@
 from Node import Node as node
 
-
+'''
+Einlesen der gegebene Datein aus src/data
+'''
 class FileManager:
 
     def read(self):
