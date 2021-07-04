@@ -71,3 +71,8 @@ After installing and running the program will return the perfect way for the bef
 
 ## License
 [GNU General Public License v3.0](https://github.com/jancodet/Running-Thief-Problem/blob/main/LICENSE)
+
+## Stats
+
+[![Readme Card Statistics](https://github-readme-stats.vercel.app/api/pin/?username=jmne&repo=Running-Thief-Problem)](https://github.com/jmne/Running-Thief-Problem/)
+
