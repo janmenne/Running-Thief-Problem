@@ -6,7 +6,7 @@
 ![](https://img.shields.io/github/issues/janmenne/Running-Thief-Problem?style=flat-square)
 ![](https://img.shields.io/github/license/janmenne/Running-Thief-Problem?style=flat-square)
 ![](https://img.shields.io/github/languages/code-size/janmenne/Running-Thief-Problem?style=flat-square)
-![](https://github.com/janmenne/Running-Thief-Problem/workflows/PythonFormatting/badge.svg)
+[![Code Check](https://github.com/janmenne/Running-Thief-Problem/actions/workflows/code-check.yml/badge.svg)](https://github.com/janmenne/Running-Thief-Problem/actions/workflows/code-check.yml)
 ![](https://img.shields.io/github/issues-pr/janmenne/Running-Thief-Problem?style=flat-square)
 
 This problem is about a thief, that has to rob a set of houses in different streets. <br>
