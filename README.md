@@ -6,9 +6,10 @@
 [![](https://img.shields.io/github/issues/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/issues)
 [![](https://img.shields.io/github/issues-pr/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/pulls)
 [![](https://img.shields.io/github/license/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/blob/main/LICENSE)
-[![](https://img.shields.io/github/languages/code-size/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/tree/main/src)
+[![](https://img.shields.io/github/languages/code-size/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/tree/main/src)<br>
 [![Code Check](https://github.com/janmenne/Running-Thief-Problem/actions/workflows/code-check.yml/badge.svg)](https://github.com/janmenne/Running-Thief-Problem/actions/workflows/code-check.yml)
 [![Generate Documentation](https://github.com/jmne/Running-Thief-Problem/actions/workflows/generate-docs.yml/badge.svg)](https://github.com/jmne/Running-Thief-Problem/actions/workflows/generate-docs.yml)
+[![Check Misspells](https://github.com/jmne/Running-Thief-Problem/actions/workflows/misspell.yml/badge.svg)](https://github.com/jmne/Running-Thief-Problem/actions/workflows/misspell.yml)
 
 
 This problem is about a thief, that has to rob a set of houses in different streets. <br>
