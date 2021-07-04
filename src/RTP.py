@@ -32,7 +32,7 @@ def getPerfectRoute(route, max_capacity):
     :param max_capacity: Das maximal Gewicht unseres Rucksacks
     :return: Die neue errechnete Route mit der jeweiligen Anweisung 'mitnehmen'=ja/nein
     '''
-    
+
     weight = 0
     value = 0
     for r in route:

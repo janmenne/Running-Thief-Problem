@@ -1,5 +1,6 @@
 import math
 
+
 def calculate_distance(v1, v2):
     '''
     Berechnet die Distanz aus den Koordinaten zweier Knotenpunkte
