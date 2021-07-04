@@ -1,25 +1,22 @@
 name: Code Quality
-
-on:
-  push:
-    paths:
-      - "**.py"
+on: [push]
 
 jobs:
-  lint:
-    name: Python Lint
+  check-quality:
     runs-on: ubuntu-latest
+    name: A job to check my code quality
     steps:
-      - run: echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
-      - name: Run flake8
-        uses: julianwachholz/flake8-action@v2
-        with:
-          checkName: "Python Lint"
-          path: path/to/files
-          config: path/to/flake8.ini
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Check code meets quality standards
+      id: code-inspector
+      uses: codeinspectorio/github-action@master
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        code_inspector_access_key: ${{ secrets.CODE_INSPECTOR_ACCESS_KEY }}
+        code_inspector_secret_key: ${{ secrets.CODE_INSPECTOR_SECRET_KEY }}
+        min_quality_grade: 'WARNING'
+        min_quality_score: '50'
+        max_defects_rate: '0.0001'
+        max_complex_functions_rate: '0.0001'
+        max_long_functions_rate: '0.0001'
+        project_name: ''
+        max_timeout_sec: '600'
