@@ -1,4 +1,4 @@
-from src.Graph import Graph, shortest_path
+from Graph import Graph, shortest_path
 import MethodCollection as Mc
 import os.path
 from os import path
