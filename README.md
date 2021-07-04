@@ -18,13 +18,13 @@ How exactly do we solve the problem?
 In our approach, we start with importing and preparing the problem models that are in the src / data
 can be found. Each .txt document represents a graph, where k is the maximum weight and n is the number of nodes.
 
-The graph is defined more precisely in the #EOF section. each line begins with the name of the node (e.g. 1), the coordinates
+The graph is defined more precisely in the #EOF section. Each line begins with the name of the node (e.g. 1), the coordinates
 of the node (x, y), value and weight of the loot (value, weight), as well as the other nodes that can be reached from this node (e.g. [1,3]).
 
-The FileManager.py class provides the basic read-in functionality and is called in the Graph.py class using the import_data function.
+The [FileManager.py](src/FileManager.py) class provides the basic read-in functionality and is called in the [Graph.py](src/Graph.py) class using the import_data function.
 This creates a new graph instance from the predefined problem / data models, which is used as the data basis in the further course.
 
-To solve the given problem, we first use the Dijkstra algorithm from the Graph.py class to find the fastest route from each node
+To solve the given problem, we first use the Dijkstra algorithm from the [Graph.py](src/Graph.py) class to find the fastest route from each node
 to be able to find a target node. This procedure is carried out using the shortest_path function.
 
 Now, however, we need another decision criterion in order to find the most effective way for us. In this case we opted for a weighted solution
