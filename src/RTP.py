@@ -24,6 +24,14 @@ def best_path(filename):
 
 
 def getPerfectRoute(route, max_capacity):
+    '''
+    nimmt die Route und packt den Rucksack solange voll, bis das maximal Gewicht erreicht ist.
+    Der ALgorithmus sortiert nach Wert/Gewicht Verhältnis, heisst: Der Knoten mit dem besten W/G,
+    wird zuerst in den Rucksack gepackt bzw. mitgenommen.
+    :param route: Unsere errechnete Route vom Start-/ zum Endknoten
+    :param max_capacity: Das maximal Gewicht unseres Rucksacks
+    :return: Die neue errechnete Route mit der jeweiligen Anweisung 'mitnehmen'=ja/nein
+    '''
     weight = 0
     value = 0
     for r in route:
@@ -40,14 +48,34 @@ def getPerfectRoute(route, max_capacity):
 
 
 def sortV_W(element):
+    '''
+    sortierung nach dem Wert/Gewicht Verhaehltnis
+    :param element: Wert und Gewicht
+    :return: W/G
+    '''
     return element[3] / element[4]
 
 
 def sortNode(element):
+    '''
+    sortierung nach dem Knoten
+    :param element: Knoten
+    :return: Knoten
+    '''
     return element[0]
 
 
 def getRoute(graph, node, route, last_element, visited):
+    '''
+    erstelle Beste Route aus gegebenem Graphen/Knoten vom Starknoten zum Endknoten
+    nach dem Kriterium Wert/Distanz/Gewicht
+    :param graph: Graph fuer Dijkstra (shortest_path)
+    :param node: Unser aktueller Knoten
+    :param route: Unsere bisherig aufgebaute Route
+    :param last_element: Das letzte ELement des Graphen
+    :param visited: Bereits besuchte Elemente
+    :return: aufgebaute beste Route nach Wert/Distanz/Gewicht von allen Knoten
+    '''
     if node.name == last_element:
         route.append([node.name, node.name, 0.000, node.getValue(), node.getWeight(), False])
         return
