@@ -6,6 +6,10 @@ from Node import Node as node
 
 
 class Graph(object):
+    '''
+    Graph welcher unser Problem darstellt, abspeichert und verarbeitet
+    '''
+
     def __init__(self):
         self.nodes = set()
         self.edges = defaultdict(set)
