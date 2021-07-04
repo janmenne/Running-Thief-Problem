@@ -75,5 +75,5 @@ After installing and running the program will return the perfect way for the bef
 
 ## :)
 
-[![Readme Card Statistics](https://github-readme-stats.vercel.app/api/pin/?username=jmne&repo=Running-Thief-Problem)](https://github.com/jmne/Running-Thief-Problem/)
+[![Readme Card Statistics](https://github-readme-stats.vercel.app/api/pin/?username=jmne&repo=Running-Thief-Problem&theme=dark)](https://github.com/jmne/Running-Thief-Problem/)
 
