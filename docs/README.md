@@ -2,11 +2,11 @@
 
 ## Classes
 
-**[FileManager](FileManager.md)**: 
+**[FileManager](FileManager.md)**: Einlesen der gegebene Datein aus src/data 
 
 **[Node](Node.md)**: Node Klasse. Bildet die Funktionalitaet von Knotenpunkten im Rahmen des Running Thief Problems ab. 
 
-**[Graph](Graph.md)**: 
+**[Graph](Graph.md)**: Graph welcher unser Problem darstellt, abspeichert und verarbeitet 
 
 
 ## Functions
