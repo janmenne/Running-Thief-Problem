@@ -3,7 +3,6 @@ import MethodCollection as Mc
 import os.path
 from os import path
 
-
 def best_path(filename):
     '''
     Berechnet den besten Pfad von einem gegebenen Startpunkt zu einem Endpunkt.
