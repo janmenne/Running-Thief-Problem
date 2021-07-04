@@ -104,14 +104,17 @@ def getRoute(graph, node, route, last_element, visited):
 
 
 if __name__ == '__main__':
-    print("######### OR-Projekt 1: SS21 WWU Muenster #########")
+    '''
+    Main-Methode mit einlesen der Daten und Ausgabe des Ergebnisses
+    '''
+    print("############ OR-Projekt 1: SS21 WWU Muenster ############")
     print("Autoren: Jan Menne, Julian Luetke-Lengerich, Nick Salfeld")
     print("Github: https://github.com/janmenne/Running-Thief-Problem")
-    print("######################################################\n\n")
+    print("#########################################################\n\n")
 
     files = os.listdir('data/')
 
-    print("###Dateien die zur verfügung stehen:\n")
+    print("Dateien die zur verfügung stehen:\n")
     for f in files:
         print(f)
     print("\n")

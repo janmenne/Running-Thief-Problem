@@ -13,14 +13,31 @@ class Graph(object):
         self.allNodes = set()
 
     def add_node(self, value):
+        '''
+        Fuegt einen neuen Knotenpunkt zum Graphen hinzu.
+        :param value: Node-Objekt
+        :return: None
+        '''
         self.nodes.add(value)
 
     def add_edge(self, from_node, to_node, distance):
+        '''
+        Fuegt eine neue Kante zwischen zwei Knotenpunkten zum Graphen hinzu.
+        :param from_node: Knotenpunkt-1
+        :param to_node: Knotenpunkt-2
+        :param distance: Distanz zwischen den beiden Knotenpunkten.
+        :return: None
+        '''
         self.edges[from_node].add(to_node)
         self.edges[to_node].add(from_node)
         self.distances[(from_node, to_node)] = distance
 
     def import_data(self, filename):
+        '''
+        Import einen Datensatz und fuegt anhand dessen Knotenpunkte und Kanten zum Graphen hinzu.
+        :param filename: Dateipfad zum Datensatz
+        :return: None
+        '''
         fm = FileManager(filename)
 
         self.allNodes = fm.items
@@ -33,6 +50,12 @@ class Graph(object):
 
 
 def dijkstra(graph, initial):
+    '''
+    Interne Implementation des Dijkstra-Algorithmus zur weiteren Verwendung in 'shortest_path'
+    :param graph: gefuellte Instanz eines Graph-Objekts
+    :param initial: Initialer Wert standartmaeßig 0.
+    :return: besuchte Knoten, Pfad
+    '''
     visited = {initial: 0}
     path = {}
 
@@ -65,6 +88,13 @@ def dijkstra(graph, initial):
 
 
 def shortest_path(graph, origin, destination):
+    '''
+    Berechnet den kuerzesten Pfad von einem Start- zu einem Endknoten.
+    :param graph: gefuellte Instanz eines Graph-Objekts
+    :param origin: Startknoten
+    :param destination: Zielknoten
+    :return: Liste aus besuchten Knoten bzw. vollstaendigem, kuerzesten Pfad.
+    '''
     visited, paths = dijkstra(graph, origin)
     full_path = deque()
     _destination = paths[destination]
