@@ -1,8 +1,23 @@
-on: push
-name: Code Quality Check
+on:
+  push:
+  pull_request:
+name: Lint Python
 jobs:
-  lint:
-    runs-on: ubuntu-latest
+  lintpython:
+    name: Lint Python
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: cclauss/Find-Python-syntax-errors-action@master
+    - uses: actions/checkout@v1
+    - uses: marian-code/pyaction@v2
+      with:
+        python-root-list: "./tests/*.py"
+        use-black: true
+        use-isort: true
+        use-mypy: true
+        use-pycodestyle: true
+        use-pydocstyle: true
+        extra-pycodestyle-options: "--max-line-length=88"
+        use-pylint: true
+        use-flake8: true
+        use-vulture: true
+        conda-python-version: "3.9"
