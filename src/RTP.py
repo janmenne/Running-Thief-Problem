@@ -6,7 +6,7 @@ from os import path
 
 def best_path(filename):
     '''
-    berechnet den besten Pfad von einem gegebenen Startpunkt zu einem Endpunkt.
+    Berechnet den besten Pfad von einem gegebenen Startpunkt zu einem Endpunkt.
     :param filename: Name der .txt Vorlage
     :return: Liste mit Reihenfolge der besuchten Knoten + Beute (True/False)
     '''
@@ -25,7 +25,7 @@ def best_path(filename):
 
 def getPerfectRoute(route, max_capacity):
     '''
-    nimmt die Route und packt den Rucksack solange voll, bis das maximal Gewicht erreicht ist.
+    Nimmt die Route und packt den Rucksack solange voll, bis das maximal Gewicht erreicht ist.
     Der ALgorithmus sortiert nach Wert/Gewicht Verhältnis, heisst: Der Knoten mit dem besten W/G,
     wird zuerst in den Rucksack gepackt bzw. mitgenommen.
     :param route: Unsere errechnete Route vom Start-/ zum Endknoten
@@ -49,7 +49,7 @@ def getPerfectRoute(route, max_capacity):
 
 def sortV_W(element):
     '''
-    sortierung nach dem Wert/Gewicht Verhaehltnis
+    Sortierung nach dem Wert/Gewicht Verhaehltnis
     :param element: Wert und Gewicht
     :return: W/G
     '''
@@ -58,7 +58,7 @@ def sortV_W(element):
 
 def sortNode(element):
     '''
-    sortierung nach dem Knoten
+    Sortierung nach dem Knoten
     :param element: Knoten
     :return: Knoten
     '''
@@ -67,7 +67,7 @@ def sortNode(element):
 
 def getRoute(graph, node, route, last_element, visited):
     '''
-    erstelle Beste Route aus gegebenem Graphen/Knoten vom Starknoten zum Endknoten
+    Erstelle Beste Route aus gegebenem Graphen/Knoten vom Starknoten zum Endknoten
     nach dem Kriterium Wert/Distanz/Gewicht
     :param graph: Graph fuer Dijkstra (shortest_path)
     :param node: Unser aktueller Knoten
