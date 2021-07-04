@@ -1,7 +1,7 @@
 # FileManager
 
 
-
+Einlesen der gegebene Datein aus src/data 
 
 ## Methods
 

@@ -1,7 +1,7 @@
 # Graph
 
 
-
+Graph welcher unser Problem darstellt, abspeichert und verarbeitet 
 
 ## Methods
 
