@@ -1,15 +1,17 @@
 name: Code Quality
-on: ["push", "pull_request"]
+on: [pull_request, push]
 
 jobs:
-
-  build:
-    name: Build
+  lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2  
-    - name: Python Linter
-      uses: sunnysid3up/python-linter@master
-      with:
-        source: "src"
-        mypy-options: "--show-error-codes"
+      - uses: actions/checkout@v1
+      - uses: grantmcconnaughey/lintly-flake8-github-action@v1.0
+        if: github.event_name == 'pull_request'
+        with:
+          # The GitHub API token to create reviews with
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Fail if "new" violations detected or "any", default "new"
+          failIf: new
+          # Additional arguments to pass to flake8, default "." (current directory)
+          args: "--ignore=E121,E123 ."
