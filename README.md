@@ -2,8 +2,11 @@
 
 # Running Thief Problem
 
+![](https://img.shields.io/github/v/release/janmenne/Running-Thief-Problem?style=flat-square)
+![](https://img.shields.io/github/issues/janmenne/Running-Thief-Problem?style=flat-square)
+![](https://img.shields.io/github/license/janmenne/Running-Thief-Problem?style=flat-square)
+![](https://img.shields.io/github/languages/code-size/janmenne/Running-Thief-Problem?style=flat-square)
 ![](https://github.com/janmenne/Running-Thief-Problem/workflows/PythonFormatting/badge.svg)
-
 
 This problem is about a thief, that has to rob a set of houses in different streets. <br>
 He has a backpack that is capable of a specified amount of loot and should get the most in the shortest time (way).<br>
