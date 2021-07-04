@@ -1,23 +1,25 @@
+name: Code Quality
+
 on:
   push:
-  pull_request:
-name: Lint Python
+    paths:
+      - "**.py"
+
 jobs:
-  lintpython:
-    name: Lint Python
-    runs-on: ubuntu-20.04
+  lint:
+    name: Python Lint
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: marian-code/pyaction@v2
-      with:
-        python-root-list: "src/"
-        use-black: true
-        use-isort: true
-        use-mypy: true
-        use-pycodestyle: true
-        use-pydocstyle: true
-        extra-pycodestyle-options: "--max-line-length=88"
-        use-pylint: true
-        use-flake8: true
-        use-vulture: true
-        conda-python-version: "3.9"
+      - run: echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: Run flake8
+        uses: julianwachholz/flake8-action@v2
+        with:
+          checkName: "Python Lint"
+          path: path/to/files
+          config: path/to/flake8.ini
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
