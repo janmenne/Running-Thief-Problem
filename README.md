@@ -2,11 +2,11 @@
 
 # Running Thief Problem
 
-![](https://img.shields.io/github/v/release/janmenne/Running-Thief-Problem?style=flat-square)
-![](https://img.shields.io/github/issues/janmenne/Running-Thief-Problem?style=flat-square)
-![](https://img.shields.io/github/issues-pr/janmenne/Running-Thief-Problem?style=flat-square)
-![](https://img.shields.io/github/license/janmenne/Running-Thief-Problem?style=flat-square)
-![](https://img.shields.io/github/languages/code-size/janmenne/Running-Thief-Problem?style=flat-square)
+[![](https://img.shields.io/github/v/release/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/releases)
+[![](https://img.shields.io/github/issues/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/issues)
+[![](https://img.shields.io/github/issues-pr/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/pulls)
+[![](https://img.shields.io/github/license/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/blob/main/LICENSE)
+[![](https://img.shields.io/github/languages/code-size/janmenne/Running-Thief-Problem?style=flat-square)](https://github.com/jmne/Running-Thief-Problem/src)
 [![Code Check](https://github.com/janmenne/Running-Thief-Problem/actions/workflows/code-check.yml/badge.svg)](https://github.com/janmenne/Running-Thief-Problem/actions/workflows/code-check.yml)
 
 This problem is about a thief, that has to rob a set of houses in different streets. <br>
