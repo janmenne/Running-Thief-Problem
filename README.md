@@ -64,6 +64,7 @@ Just download the [Package](https://github.com/janmenne/Running-Thief-Problem/re
 ```bash
 RTP.exe
 ```
+_Microsoft Defender sometimes detects the RTP.exe file as a virus. For whatever reason. Just run a [Virus Check](https://www.virustotal.com/gui/file/769cb52c3c47bd3c4677694863d062e1e4db007efc4208504ea8ea74b24fe3d5/detection) and you will see it's fine!_
 
 ## Usage
 
