@@ -10,6 +10,7 @@
 [![Code Check](https://github.com/janmenne/Running-Thief-Problem/actions/workflows/code-check.yml/badge.svg)](https://github.com/janmenne/Running-Thief-Problem/actions/workflows/code-check.yml)
 [![Generate Documentation](https://github.com/jmne/Running-Thief-Problem/actions/workflows/generate-docs.yml/badge.svg)](https://github.com/jmne/Running-Thief-Problem/actions/workflows/generate-docs.yml)
 [![Check Misspells](https://github.com/jmne/Running-Thief-Problem/actions/workflows/misspell.yml/badge.svg)](https://github.com/jmne/Running-Thief-Problem/actions/workflows/misspell.yml)
+[![CodeQL](https://github.com/jmne/Running-Thief-Problem/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/jmne/Running-Thief-Problem/actions/workflows/codeql-analysis.yml)
 
 
 This problem is about a thief, that has to rob a set of houses in different streets. <br>
