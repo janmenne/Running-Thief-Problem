@@ -1,12 +1,15 @@
-from Graph import Graph, shortest_path
-import MethodCollection as Mc
 import os.path
 from os import path
 
+import MethodCollection as Mc
+from Graph import Graph, shortest_path
 
-def best_path(filename):
+
+def best_path(filename, a, e):
     '''
     Berechnet den besten Pfad von einem gegebenen Startpunkt zu einem Endpunkt.
+    :param e: Endknoten
+    :param a: Anfangsknoten
     :param filename: Name der .txt Vorlage.
     :return: Liste mit Reihenfolge der besuchten Knoten + Beute (True/False)
     '''
@@ -14,16 +17,17 @@ def best_path(filename):
     graph.import_data(filename)
 
     visited = []
-    last_element = list(graph.allNodes)[-1].name
+    last_element = list(graph.allNodes)[int(e) - 1].name
     route = []
-    node = graph.allNodes.pop(0)
+    node = graph.allNodes[int(a) - 1]
+
     getRoute(graph, node, route, last_element, visited)
 
     route.sort(key=sortV_W, reverse=True)
-    getPerfectRoute(route, graph.max_capacity)
+    getPerfectRoute(route, graph.max_capacity, node, last_element)
 
 
-def getPerfectRoute(route, max_capacity):
+def getPerfectRoute(route, max_capacity, start, end):
     '''
     Nimmt die Route und packt den Rucksack solange voll, bis das maximal Gewicht erreicht ist.
     Der ALgorithmus sortiert nach Wert/Gewicht Verhältnis, heisst: Der Knoten mit dem besten W/G,
@@ -40,11 +44,13 @@ def getPerfectRoute(route, max_capacity):
             weight += r[4]
             r[5] = True
             value += r[3]
-    route.sort(key=sortNode)
+    # route.sort(key=sortNode)
     route.insert(0, ["Knoten", "Nachbar", "WDG", "Wert", "Gewicht", "Mitnehmen?"])
     route.append("Mitgenommenes Gewicht: " + str(weight))
     route.append("Maximales Gewicht: " + str(max_capacity))
     route.append("Wert der Beute: " + str(value))
+    route.append("Anfangsknoten = " + str(start.name))
+    route.append("Endknoten = " + str(end))
     print(*route, sep='\n')
 
 
@@ -83,6 +89,11 @@ def getRoute(graph, node, route, last_element, visited):
 
     best_wdg = 0
     best_neighbour = None
+
+    '''
+    Der Alg. arbeitet sich von jedem Knoten ueber die Nachbarknoten voran.
+    Es wird immer die Kante gewaehlt, welche am besten (hoechsten) ist.
+    '''
 
     for neighbour in node.neighbours:
         if neighbour in visited:
@@ -123,7 +134,13 @@ if __name__ == '__main__':
     while not path.exists("data/" + p):
         print("Die angegebene Datei konnte nicht gefunden werden.")
         p = input("Welche Datei aus /data/.. soll benutzt werden?\n")
-    print("\n\n")
-    best_path("data/" + p)
+    print("\n")
+    nodeA = input("Welcher Anfangsknoten soll benutzt werden? ")
+    nodeE = input("Welcher Endknoten soll erreicht werden? ")
+    while nodeA == nodeE:
+        print("Die Knoten dürfen nicht gleich sein..\n")
+        nodeA = input("Welcher Anfangsknoten soll benutzt werden? ")
+        nodeE = input("Welcher Endknoten soll erreicht werden? ")
+    best_path("data/" + p, nodeA, nodeE)
     print("\n\n")
     input("Press key to end programm...")
