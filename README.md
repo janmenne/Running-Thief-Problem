@@ -1,4 +1,4 @@
-<div style="text-align: center;"><p><img src="https://media.giphy.com/media/ZIzN7YWNuTUYg/giphy.gif" alt="or gif" /></p></div>
+<p align=center><img src="https://media.giphy.com/media/ZIzN7YWNuTUYg/giphy.gif" alt="or gif" /></p>
 
 # Running Thief Problem
 
