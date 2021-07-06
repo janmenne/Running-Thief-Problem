@@ -25,9 +25,9 @@ Example of a .txt:
 ```
 #META
 name = Problem 0
-k = 6
-N = 5
-#NODES
+k = 6 (Maximal capacity)
+N = 5 (Number of nodes)
+#NODES (Format: Coordinates, Weight/Value, Neighbours nodes)
 1   (1,1)  (1,3)  [2,3]
 2   (0,4)  (2,1)  
 3   (4,2)  (2,4)  [1,2,4]
