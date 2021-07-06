@@ -1,5 +1,6 @@
 from Node import Node as node
 
+
 class FileManager:
     '''
     Einlesen der gegebene Datein aus src/data
