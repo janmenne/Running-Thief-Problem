@@ -1,66 +1,52 @@
 # Graph
 
-
-Graph welcher unser Problem darstellt, abspeichert und verarbeitet 
+Graph welcher unser Problem darstellt, abspeichert und verarbeitet
 
 ## Methods
 
-
 ### __init__
 
-
-
-
 #### Parameters
+
 name | description | default
 --- | --- | ---
-self |  | 
-
-
-
-
+self |  |
 
 ### add_node
 
-
-Fuegt einen neuen Knotenpunkt zum Graphen hinzu. :param value: Node-Objekt :return: None 
+Fuegt einen neuen Knotenpunkt zum Graphen hinzu. :param value: Node-Objekt :return: None
 
 #### Parameters
+
 name | description | default
 --- | --- | ---
-self |  | 
-value |  | 
-
-
-
-
+self |  |
+value |  |
 
 ### add_edge
 
-
-Fuegt eine neue Kante zwischen zwei Knotenpunkten zum Graphen hinzu. :param from_node: Knotenpunkt-1 :param to_node: Knotenpunkt-2 :param distance: Distanz zwischen den beiden Knotenpunkten. :return: None 
+Fuegt eine neue Kante zwischen zwei Knotenpunkten zum Graphen hinzu. :param from_node: Knotenpunkt-1 :param to_node:
+Knotenpunkt-2 :param distance: Distanz zwischen den beiden Knotenpunkten. :return: None
 
 #### Parameters
+
 name | description | default
 --- | --- | ---
-self |  | 
-from_node |  | 
-to_node |  | 
-distance |  | 
-
-
-
-
+self |  |
+from_node |  |
+to_node |  |
+distance |  |
 
 ### import_data
 
-
-Import einen Datensatz und fuegt anhand dessen Knotenpunkte und Kanten zum Graphen hinzu. :param filename: Dateipfad zum Datensatz :return: None 
+Import einen Datensatz und fuegt anhand dessen Knotenpunkte und Kanten zum Graphen hinzu. :param filename: Dateipfad zum
+Datensatz :return: None
 
 #### Parameters
+
 name | description | default
 --- | --- | ---
-self |  | 
+self |  |
 filename |  | 
 
 
